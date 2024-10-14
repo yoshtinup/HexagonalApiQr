@@ -1,4 +1,4 @@
-// v1/application/message/SendMessageUseCase.js
+
 
 export class SendMessageUseCase {
     constructor(servicesRepository) {
@@ -12,7 +12,7 @@ export class SendMessageUseCase {
      * @returns {Promise<string>} - ID del mensaje enviado.
      */
     async execute(to, body) {
-      return await this.servicesRepository.sendMessage(to, body);
+      return await this.servicesRepository.sendCorreo(to, body);
     }
   }
   

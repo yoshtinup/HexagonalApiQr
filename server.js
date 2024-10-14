@@ -7,6 +7,7 @@ import { LoginRouter } from "./v1/infrastructure/interfaces/http/routers/loginRu
 import { historyRouter } from "./v1/infrastructure/interfaces/http/routers/historyRouter.js";
 import { servicesRouter } from "./v1/infrastructure/interfaces/http/routers/ServicesRouter.js";
 import { servicesPaymentRouter } from "./v1/infrastructure/interfaces/http/routers/ServicePaymentRouter.js";
+import { EmailRouter } from "./v1/infrastructure/interfaces/http/routers/MensageRouter.js";
 dotenv.config();
 
 import cors from "./node_modules/cors/lib/index.js";
@@ -19,6 +20,7 @@ app.use("/api/v1",LoginRouter);
 app.use("/api/v1",historyRouter);
 app.use("/api/v1",servicesRouter);
 app.use("/api/v1",servicesPaymentRouter);
+app.use("/api/v1",EmailRouter);
 
 
 app.listen(3002, ()=> {
